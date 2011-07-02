@@ -1,0 +1,32 @@
+<h1>Contas a Pagar</h1>
+
+<table cellspacing="0" class="grid">
+  <thead>
+    <tr>
+      <th>Account</th>
+      <th>Favored</th>
+      <th>Value</th>
+      <th>Maturity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  <thead>
+  <tbody>
+<% @pays.each do |pay| %>
+  <tr>
+    <td><%= pay.account.name %></td>
+    <td><%= pay.favored.name %></td>
+    <td><%= pay.value %></td>
+    <td><%= pay.maturity %></td>
+    <td><%= link_to 'Show', pay %></td>
+    <td><%= link_to 'Edit', edit_pay_path(pay) %></td>
+    <td><%= link_to 'Destroy', pay, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  <tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Pay', new_pay_path %>

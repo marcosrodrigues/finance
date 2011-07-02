@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Account:</b>
+  <%= @receivable.account %>
+</p>
+
+<p>
+  <b>Favored:</b>
+  <%= @receivable.favored %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @receivable.value %>
+</p>
+
+<p>
+  <b>Maturity:</b>
+  <%= @receivable.maturity %>
+</p>
+
+
+<%= link_to 'Edit', edit_receivable_path(@receivable) %> |
+<%= link_to 'Back', receivables_path %>

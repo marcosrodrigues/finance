@@ -1,0 +1,28 @@
+<h1>Contas</h1>
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Kind</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%= account.name %></td>
+    <td><%= account.kind %></td>
+    <td><%= link_to 'Show', account %></td>
+    <td><%= link_to 'Edit', edit_account_path(account) %></td>
+    <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Account', new_account_path %>

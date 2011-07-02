@@ -1,0 +1,33 @@
+<%= form_for(@pay) do |f| %>
+  <% if @pay.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pay.errors.count, "error") %> prohibited this pay from being saved:</h2>
+
+      <ul>
+      <% @pay.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :account_id %><br />
+    <%= f.select :account_id, @accounts, :prompt => "Selecione..." %>
+  </div>
+  <div class="field">
+    <%= f.label :favored_id %><br />
+    <%= f.select :favored_id, @favoreds, :prompt => "Selecione..." %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :maturity %><br />
+    <%= f.date_select :maturity, :order => [:day, :month, :year], :prompt => {:day => 'Dia', :month => 'Mês', :year => 'Ano'} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Account:</b>
+  <%= @pay.account %>
+</p>
+
+<p>
+  <b>Favored:</b>
+  <%= @pay.favored %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @pay.value %>
+</p>
+
+<p>
+  <b>Maturity:</b>
+  <%= @pay.maturity %>
+</p>
+
+
+<%= link_to 'Edit', edit_pay_path(@pay) %> |
+<%= link_to 'Back', pays_path %>

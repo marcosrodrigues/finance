@@ -1,0 +1,30 @@
+<h1>Favorecidos</h1>
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Kind</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @favoreds.each do |favored| %>
+  <tr>
+    <td><%= favored.name %></td>
+    <td><%= favored.email %></td>
+    <td><%= favored.kind %></td>
+    <td><%= link_to 'Show', favored %></td>
+    <td><%= link_to 'Edit', edit_favored_path(favored) %></td>
+    <td><%= link_to 'Destroy', favored, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Favored', new_favored_path %>

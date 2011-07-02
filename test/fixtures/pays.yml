@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  account: 
+  favored: 
+  value: 1.5
+  maturity: 2011-07-01
+
+two:
+  account: 
+  favored: 
+  value: 1.5
+  maturity: 2011-07-01

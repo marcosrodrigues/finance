@@ -1,0 +1,48 @@
+body {
+	width: 900px;
+	margin: 0px;
+}
+
+.header {
+	float: left;
+	width: 895px;
+	height: 30px;
+	font-size: 25px;
+	font-family: courier-new;
+	padding: 10px 0px 0px 5px;
+  background-color: #ff7f50;
+}
+
+.panelLeft {
+	float: left;
+	width: 200px;
+	height: 430px;
+}
+
+.content {
+	float: left;
+	width: 690px;
+	height: 430px;
+	margin-left: 10px;
+}
+
+.footer {
+	float: left;
+	width: 900px;
+	height: 30px;
+	font-size: 12px;
+	text-align: center;
+  background-color: #ff7f50;
+}
+
+table thead th {
+  background-color: #ff7f50;
+}
+
+table tbody tr.odd td {
+  background-color: #ffffcc;
+}
+
+table tbody tr.hover td {
+  background-color: #a9d0f5;
+}

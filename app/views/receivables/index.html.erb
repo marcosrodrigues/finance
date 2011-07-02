@@ -1,0 +1,32 @@
+<h1>Contas a Receber</h1>
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Account</th>
+      <th>Favored</th>
+      <th>Value</th>
+      <th>Maturity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  <thead>
+  <tbody>
+<% @receivables.each do |receivable| %>
+  <tr>
+    <td><%= receivable.account.name %></td>
+    <td><%= receivable.favored.name %></td>
+    <td><%= receivable.value %></td>
+    <td><%= receivable.maturity %></td>
+    <td><%= link_to 'Detalhes', receivable %></td>
+    <td><%= link_to 'Editar', edit_receivable_path(receivable) %></td>
+    <td><%= link_to 'Excluir', receivable, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Receivable', new_receivable_path %>

@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Finance</title>
+  <title>.:: Finance - Controle Financeiro ::.</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+  <%= csrf_meta_tag %> 
+  
+  <script>
+    $(function(){
+      $('table > tbody > tr:odd').addClass('odd');
+      
+      $('table > tbody > tr').hover(function(){
+        $(this).toggleClass('hover');
+      });
+      
+      $('.menu .subCadastros, .subMovimentos, .subRelatorios').hide();
+      $('ul.menu li.cadastros').click(function(){
+        $('.menu .subCadastros').slideToggle();
+        return false;
+      })
+      $('ul.menu li.movimentos').click(function(){
+        $('.menu .subMovimentos').slideToggle();
+        return false;
+      })
+      $('ul.menu li.relatorios').click(function(){
+        $('.menu .subRelatorios').slideToggle();
+        return false;
+      })
+    });
+  </script> 
 </head>
 <body>
+  <div class="header">
+		<%= link_to 'Finance', root_path %>
+	</div>
 
-<%= yield %>
-
+	<div class="panelLeft">
+	  <!-- Menu principal -->
+		<ul class="menu">
+			<li class="cadastros"><%= link_to 'Cadastros' %></li>
+				<ul class="subCadastros">
+					<li><%= link_to 'Favorecidos', favoreds_path %></li>
+					<li><%= link_to 'Contas', accounts_path %></li>
+				</ul>
+			<li class="movimentos"><%= link_to 'Movimentos' %></li>
+				<ul class="subMovimentos">
+					<li><%= link_to 'Contas a Receber', receivables_path %></li>
+					<li><%= link_to 'Contas a Pagar', pays_path %></li>
+				</ul>
+			<li class="relatorios"><%= link_to 'Relatórios' %></li>
+				<ul class="subRelatorios">
+					<li>Contas a Receber</li>
+					<li>Contas a Pagar</li>
+				</ul>
+		</ul>		
+	</div>
+	
+	<div class="content">
+		<%= yield %>
+	</div>
+	<div class="footer">
+		Copyright 2011
+	</div>
 </body>
 </html>
