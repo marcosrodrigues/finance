@@ -1,0 +1,47 @@
+<h2>Próximas Contas a Pagar</h2>
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Conta</th>
+      <th>Favorecido</th>
+      <th>Valor</th>
+      <th>Vencimento</th>
+    </tr>
+  <thead>
+  <tbody>
+<% @next_pays.each do |pay| %>
+  <tr>
+    <td><%= pay.account.name %></td>
+    <td><%= pay.favored.name %></td>
+    <td><%= number_to_currency(pay.value) %></td>
+    <td><%= pay.maturity.strftime("%d/%m/%Y") %></td>
+  </tr>
+<% end %>
+  <tbody>
+</table>
+
+<br/>
+
+<h2>Próximas Contas a Receber</h2>
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Conta</th>
+      <th>Favorecido</th>
+      <th>Valor</th>
+      <th>Vencimento</th>
+    </tr>
+  <thead>
+  <tbody>
+<% @next_receivables.each do |receivable| %>
+  <tr>
+    <td><%= receivable.account.name %></td>
+    <td><%= receivable.favored.name %></td>
+    <td><%= number_to_currency(receivable.value) %></td>
+    <td><%= receivable.maturity.strftime("%d/%m/%Y") %></td>
+  </tr>
+<% end %>
+  <tbody>
+</table>
