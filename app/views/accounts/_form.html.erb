@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Nome" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :kind %><br />
+    <%= f.label :kind, "Tipo" %><br />
     <%= f.select :kind, Account::KIND, :prompt => 'Selecione...' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
   </div>
 <% end %>

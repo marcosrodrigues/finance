@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Account:</b>
-  <%= @pay.account %>
+  <b>Conta:</b>
+  <%= @pay.account.name %>
 </p>
 
 <p>
-  <b>Favored:</b>
-  <%= @pay.favored %>
+  <b>Favorecido:</b>
+  <%= @pay.favored.name %>
 </p>
 
 <p>
-  <b>Value:</b>
-  <%= @pay.value %>
+  <b>Valor:</b>
+  <%= number_to_currency(@pay.value) %>
 </p>
 
 <p>
-  <b>Maturity:</b>
-  <%= @pay.maturity %>
+  <b>Vencimento:</b>
+  <%= @pay.maturity.strftime("%d/%m/%Y") %>
 </p>
 
 
-<%= link_to 'Edit', edit_pay_path(@pay) %> |
-<%= link_to 'Back', pays_path %>
+<%= link_to 'Editar', edit_pay_path(@pay) %> |
+<%= link_to 'Voltar', pays_path %>

@@ -3,11 +3,9 @@
 <table cellspacing="0">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Kind</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -15,9 +13,9 @@
   <tr>
     <td><%= account.name %></td>
     <td><%= account.kind %></td>
-    <td><%= link_to 'Show', account %></td>
-    <td><%= link_to 'Edit', edit_account_path(account) %></td>
-    <td><%= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Detalhes', account %></td>
+    <td><%= link_to 'Editar', edit_account_path(account) %></td>
+    <td><%= link_to 'Excluir', account, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
   </tbody>
@@ -25,4 +23,4 @@
 
 <br />
 
-<%= link_to 'New Account', new_account_path %>
+<%= link_to 'Novo', new_account_path %>

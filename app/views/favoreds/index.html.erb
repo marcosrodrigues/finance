@@ -3,12 +3,10 @@
 <table cellspacing="0">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Kind</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Tipo</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -17,9 +15,9 @@
     <td><%= favored.name %></td>
     <td><%= favored.email %></td>
     <td><%= favored.kind %></td>
-    <td><%= link_to 'Show', favored %></td>
-    <td><%= link_to 'Edit', edit_favored_path(favored) %></td>
-    <td><%= link_to 'Destroy', favored, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Detalhes', favored %></td>
+    <td><%= link_to 'Editar', edit_favored_path(favored) %></td>
+    <td><%= link_to 'Excluir', favored, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
   </tbody>
@@ -27,4 +25,4 @@
 
 <br />
 
-<%= link_to 'New Favored', new_favored_path %>
+<%= link_to 'Novo', new_favored_path %>

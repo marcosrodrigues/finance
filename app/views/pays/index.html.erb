@@ -1,15 +1,13 @@
 <h1>Contas a Pagar</h1>
 
-<table cellspacing="0" class="grid">
+<table cellspacing="0">
   <thead>
     <tr>
-      <th>Account</th>
-      <th>Favored</th>
-      <th>Value</th>
-      <th>Maturity</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Conta</th>
+      <th>Favorecido</th>
+      <th>Valor</th>
+      <th>Vencimento</th>
+      <th colspan="3"></th>
     </tr>
   <thead>
   <tbody>
@@ -17,11 +15,11 @@
   <tr>
     <td><%= pay.account.name %></td>
     <td><%= pay.favored.name %></td>
-    <td><%= pay.value %></td>
-    <td><%= pay.maturity %></td>
-    <td><%= link_to 'Show', pay %></td>
-    <td><%= link_to 'Edit', edit_pay_path(pay) %></td>
-    <td><%= link_to 'Destroy', pay, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= number_to_currency(pay.value) %></td>
+    <td><%= pay.maturity.strftime("%d/%m/%Y") %></td>
+    <td><%= link_to 'Detalhes', pay %></td>
+    <td><%= link_to 'Editar', edit_pay_path(pay) %></td>
+    <td><%= link_to 'Excluir', pay, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
   <tbody>
@@ -29,4 +27,4 @@
 
 <br />
 
-<%= link_to 'New Pay', new_pay_path %>
+<%= link_to 'Novo', new_pay_path %>

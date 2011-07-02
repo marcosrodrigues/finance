@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Account:</b>
-  <%= @receivable.account %>
+  <b>Conta:</b>
+  <%= @receivable.account.name %>
 </p>
 
 <p>
-  <b>Favored:</b>
-  <%= @receivable.favored %>
+  <b>Favorecido:</b>
+  <%= @receivable.favored.name %>
 </p>
 
 <p>
-  <b>Value:</b>
-  <%= @receivable.value %>
+  <b>Valor:</b>
+  <%= number_to_currency(@receivable.value) %>
 </p>
 
 <p>
-  <b>Maturity:</b>
-  <%= @receivable.maturity %>
+  <b>Vencimento:</b>
+  <%= @receivable.maturity.strftime("%d/%m/%Y") %>
 </p>
 
 
-<%= link_to 'Edit', edit_receivable_path(@receivable) %> |
-<%= link_to 'Back', receivables_path %>
+<%= link_to 'Editar', edit_receivable_path(@receivable) %> |
+<%= link_to 'Voltar', receivables_path %>

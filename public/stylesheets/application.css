@@ -1,6 +1,23 @@
 body {
 	width: 900px;
 	margin: 0px;
+	background-color: #fff; 
+	color: #333;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+a:link {
+  text-decoration:none;
+}
+
+a:hover { 
+  color: #f00; 
+  background-color:#ff0; 
 }
 
 .header {
@@ -10,7 +27,7 @@ body {
 	font-size: 25px;
 	font-family: courier-new;
 	padding: 10px 0px 0px 5px;
-  background-color: #ff7f50;
+  color:#fff;
 }
 
 .panelLeft {
@@ -29,14 +46,30 @@ body {
 .footer {
 	float: left;
 	width: 900px;
-	height: 30px;
+	height: 20px;
 	font-size: 12px;
 	text-align: center;
-  background-color: #ff7f50;
 }
 
-table thead th {
-  background-color: #ff7f50;
+.borda {
+  border-collapse: collapse;
+}
+
+.borda tbody tr td {
+  border: 1px;
+}
+
+table {
+  width:600px;
+  border:1px solid #ccc;
+}
+
+table thead th{
+  background-color:#ad2525;
+  padding:6px;
+  color:#fff;
+  text-align:center;
+  font-size:14px;
 }
 
 table tbody tr.odd td {
@@ -45,4 +78,48 @@ table tbody tr.odd td {
 
 table tbody tr.hover td {
   background-color: #a9d0f5;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
 }
